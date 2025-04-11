@@ -1,6 +1,5 @@
 import React from "react";
 import CardMenu from "components/card/CardMenu";
-import Checkbox from "components/checkbox";
 import Card from "components/card";
 
 import {
@@ -11,7 +10,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 
-function CheckTable(props) {
+function ProductosTable(props) {
   const { tableData } = props;
   const [sorting, setSorting] = React.useState([]);
   let defaultData = tableData;
@@ -19,26 +18,19 @@ function CheckTable(props) {
     columnHelper.accessor("name", {
       id: "name",
       header: () => (
-        <p className="text-sm font-bold text-gray-600 dark:text-white">NAME</p>
+        <p className="text-sm font-bold text-gray-600 dark:text-white">Nombre</p>
       ),
       cell: (info) => (
-        <div className="flex items-center">
-          <Checkbox
-            defaultChecked={info.getValue()[1]}
-            colorScheme="brandScheme"
-            me="10px"
-          />
-          <p className="ml-3 text-sm font-bold text-navy-700 dark:text-white">
-            {info.getValue()[0]}
-          </p>
-        </div>
+        <p className="text-sm font-bold text-navy-700 dark:text-white">
+          {info.getValue()}
+        </p>
       ),
     }),
     columnHelper.accessor("progress", {
       id: "progress",
       header: () => (
         <p className="text-sm font-bold text-gray-600 dark:text-white">
-          PROGRESS
+          stock
         </p>
       ),
       cell: (info) => (
@@ -51,19 +43,8 @@ function CheckTable(props) {
       id: "quantity",
       header: () => (
         <p className="text-sm font-bold text-gray-600 dark:text-white">
-          QUANTITY
+          Cantidad vendida
         </p>
-      ),
-      cell: (info) => (
-        <p className="text-sm font-bold text-navy-700 dark:text-white">
-          {info.getValue()}
-        </p>
-      ),
-    }),
-    columnHelper.accessor("date", {
-      id: "date",
-      header: () => (
-        <p className="text-sm font-bold text-gray-600 dark:text-white">DATE</p>
       ),
       cell: (info) => (
         <p className="text-sm font-bold text-navy-700 dark:text-white">
@@ -79,18 +60,16 @@ function CheckTable(props) {
     state: {
       sorting,
     },
-    onSortingChange: setSorting,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     debugTable: true,
   });
   return (
-    <Card extra={"w-full h-full sm:overflow-auto px-6"}>
-      <header className="relative flex items-center justify-between pt-4">
+    <Card extra={"w-full pb-10 p-4 h-full"}>
+      <header className="relative flex items-center justify-between">
         <div className="text-xl font-bold text-navy-700 dark:text-white">
-          Check Table
+          Productos más vendidos
         </div>
-
         <CardMenu />
       </header>
 
@@ -153,5 +132,5 @@ function CheckTable(props) {
   );
 }
 
-export default CheckTable;
+export default ProductosTable;
 const columnHelper = createColumnHelper();

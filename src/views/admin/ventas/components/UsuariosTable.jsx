@@ -1,8 +1,6 @@
 import React from "react";
 import CardMenu from "components/card/CardMenu";
 import Card from "components/card";
-import Progress from "components/progress";
-import { MdCancel, MdCheckCircle, MdOutlineError } from "react-icons/md";
 
 import {
   createColumnHelper,
@@ -12,10 +10,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 
-const columnHelper = createColumnHelper();
-
-// const columns = columnsDataCheck;
-export default function ComplexTable(props) {
+function UsuariosTable(props) {
   const { tableData } = props;
   const [sorting, setSorting] = React.useState([]);
   let defaultData = tableData;
@@ -23,40 +18,7 @@ export default function ComplexTable(props) {
     columnHelper.accessor("name", {
       id: "name",
       header: () => (
-        <p className="text-sm font-bold text-gray-600 dark:text-white">NAME</p>
-      ),
-      cell: (info) => (
-        <p className="text-sm font-bold text-navy-700 dark:text-white">
-          {info.getValue()}
-        </p>
-      ),
-    }),
-    columnHelper.accessor("status", {
-      id: "status",
-      header: () => (
-        <p className="text-sm font-bold text-gray-600 dark:text-white">
-          STATUS
-        </p>
-      ),
-      cell: (info) => (
-        <div className="flex items-center">
-          {info.getValue() === "Approved" ? (
-            <MdCheckCircle className="text-green-500 me-1 dark:text-green-300" />
-          ) : info.getValue() === "Disable" ? (
-            <MdCancel className="text-red-500 me-1 dark:text-red-300" />
-          ) : info.getValue() === "Error" ? (
-            <MdOutlineError className="text-amber-500 me-1 dark:text-amber-300" />
-          ) : null}
-          <p className="text-sm font-bold text-navy-700 dark:text-white">
-            {info.getValue()}
-          </p>
-        </div>
-      ),
-    }),
-    columnHelper.accessor("date", {
-      id: "date",
-      header: () => (
-        <p className="text-sm font-bold text-gray-600 dark:text-white">DATE</p>
+        <p className="text-sm font-bold text-gray-600 dark:text-white">Fecha</p>
       ),
       cell: (info) => (
         <p className="text-sm font-bold text-navy-700 dark:text-white">
@@ -68,13 +30,37 @@ export default function ComplexTable(props) {
       id: "progress",
       header: () => (
         <p className="text-sm font-bold text-gray-600 dark:text-white">
-          PROGRESS
+          Productos
         </p>
       ),
       cell: (info) => (
-        <div className="flex items-center">
-          <Progress width="w-[108px]" value={info.getValue()} />
-        </div>
+        <p className="text-sm font-bold text-navy-700 dark:text-white">
+          {info.getValue()}
+        </p>
+      ),
+    }),
+    columnHelper.accessor("quantity", {
+      id: "quantity",
+      header: () => (
+        <p className="text-sm font-bold text-gray-600 dark:text-white">
+          Total
+        </p>
+      ),
+      cell: (info) => (
+        <p className="text-sm font-bold text-navy-700 dark:text-white">
+          {info.getValue()}
+        </p>
+      ),
+    }),
+    columnHelper.accessor("date", {
+      id: "date",
+      header: () => (
+        <p className="text-sm font-bold text-gray-600 dark:text-white">Acciones</p>
+      ),
+      cell: (info) => (
+        <p className="text-sm font-bold text-navy-700 dark:text-white">
+          {info.getValue()}
+        </p>
       ),
     }),
   ]; // eslint-disable-next-line
@@ -91,13 +77,18 @@ export default function ComplexTable(props) {
     debugTable: true,
   });
   return (
-    <Card extra={"w-full h-full px-6 pb-6 sm:overflow-x-auto"}>
-      <div className="relative flex items-center justify-between pt-4">
+    <Card extra={"w-full pb-10 p-4 h-full"}>
+      <header className="relative flex items-center justify-between">
         <div className="text-xl font-bold text-navy-700 dark:text-white">
-          Complex Table
+          Tabla de ventas 
+          <button
+            href=""
+            className="ml-5 linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700 dark:bg-brand-400 dark:hover:bg-brand-300 dark:active:opacity-90"
+          >
+            Agregar Nuevo</button>
         </div>
         <CardMenu />
-      </div>
+      </header>
 
       <div className="mt-8 overflow-x-scroll xl:overflow-x-hidden">
         <table className="w-full">
@@ -157,3 +148,6 @@ export default function ComplexTable(props) {
     </Card>
   );
 }
+
+export default UsuariosTable;
+const columnHelper = createColumnHelper();

@@ -3,7 +3,7 @@ import React from "react";
 // Admin Imports
 import MainDashboard from "views/admin/default";
 import Productos from "views/admin/productos";
-import Profile from "views/admin/profile";
+import Ventas from "views/admin/ventas";
 import Usuarios from "views/admin/usuarios";
 
 // Auth Imports
@@ -29,7 +29,7 @@ const routes = [
   {
     name: "Productos",
     layout: "/admin",
-    path: "nft-marketplace",
+    path: "productos",
     icon: <MdOutlineShoppingCart className="h-6 w-6" />,
     component: <Productos />,
     secondary: true,
@@ -37,16 +37,16 @@ const routes = [
   {
     name: "Usuarios",
     layout: "/admin",
-    icon: <MdBarChart className="h-6 w-6" />,
-    path: "data-tables",
+    icon: <MdPerson className="h-6 w-6" />,
+    path: "usuarios",
     component: <Usuarios />,
   },
   {
     name: "Ventas",
     layout: "/admin",
-    path: "profile",
-    icon: <MdPerson className="h-6 w-6" />,
-    component: <Profile />,
+    path: "ventas",
+    icon: <MdBarChart className="h-6 w-6" />,
+    component: <Ventas />,
   },
   {
     name: "Cerrar sesión",

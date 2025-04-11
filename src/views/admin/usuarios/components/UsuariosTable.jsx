@@ -80,7 +80,12 @@ function UsuariosTable(props) {
     <Card extra={"w-full pb-10 p-4 h-full"}>
       <header className="relative flex items-center justify-between">
         <div className="text-xl font-bold text-navy-700 dark:text-white">
-          Tabla de usuarios
+          Tabla de usuarios  
+          <button
+            href=""
+            className="ml-5 linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700 dark:bg-brand-400 dark:hover:bg-brand-300 dark:active:opacity-90"
+          >
+            Agregar Nuevo</button>
         </div>
         <CardMenu />
       </header>
