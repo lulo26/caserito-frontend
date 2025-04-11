@@ -1,6 +1,6 @@
 import ProductosTable from "./components/ProductosTable";
-import TotalSpent from "views/admin/default/components/TotalSpent";
-import PieChartCard from "views/admin/default/components/PieChartCard";
+import TotalSpent from "views/admin/home/components/TotalSpent";
+import PieChartCard from "views/admin/home/components/PieChartCard";
 
 import {
   columnsDataColumns,

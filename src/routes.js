@@ -1,7 +1,8 @@
 import React from "react";
 
 // Admin Imports
-import MainDashboard from "views/admin/default";
+//import MainDashboard from "views/admin/default";
+import Home from "views/admin/home";
 import Productos from "views/admin/productos";
 import Ventas from "views/admin/ventas";
 import Usuarios from "views/admin/usuarios";
@@ -22,9 +23,9 @@ const routes = [
   {
     name: "Página principal",
     layout: "/admin",
-    path: "default",
+    path: "home",
     icon: <MdHome className="h-6 w-6" />,
-    component: <MainDashboard />,
+    component: <Home />,
   },
   {
     name: "Productos",
