@@ -8,7 +8,7 @@ import { useDisclosure } from "@chakra-ui/hooks";
 import CardHorizon from "../../../../components/card/CardHorizon"
 import InputField from "../../../../components/input/InputField";
  
-const ModalProducto = () => {
+const ModalUsuario = () => {
 const { isOpen, onOpen, onClose } = useDisclosure();
 return (
  
@@ -23,13 +23,12 @@ return (
     <ModalContent className="!z-[1002] !m-auto !w-max min-w-[350px] !max-w-[85%] md:top-[12vh]">
       <ModalBody>
         <CardHorizon extra="px-[30px] pt-[35px] pb-[40px] max-w-[450px] flex flex-col !z-[1004]">
-          <h1 className="mb-[20px] text-2xl font-bold">Agregar nuevo producto</h1>
+          <h1 className="mb-[20px] text-2xl font-bold">Agregar nuevo Usuario</h1>
           <div className="flex flex-col w-72 items-center">
           <div className="w-72">
             <InputField label="Nombre" id="nombre"type="text"/>
-            <InputField label="Descripción" id="descripcion" type="text"/>
-            <InputField label="Precio" id="precio" type="number"/>
-            <InputField label="Cantidad" id="cantidad" type="number"/>
+            <InputField label="Apellidos" id="apellidos" type="text"/>
+            <InputField label="Documento" id="documento" type="number"/>
     </div>
     </div>
           <div className="flex gap-2 mt-5">
@@ -49,4 +48,4 @@ return (
   </Modal>
 </>
 ); };
-export default ModalProducto;
+export default ModalUsuario;

@@ -38,18 +38,27 @@ const ProductCard = ({ title, price, image, extra }) => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between md:flex-col md:items-start lg:flex-row lg:justify-between xl:flex-col 2xl:items-start 3xl:flex-row 3xl:items-center 3xl:justify-between">
+        <div className="flex items-center justify-between md:flex-col md:items-start lg:flex-row xl:flex-col 2xl:items-start 3xl:flex-row 3xl:items-center">
           <div className="flex">
             <p className="mb-2 text-sm font-bold text-brand-500 dark:text-white">
               Precio: <span>$</span>{price} 
             </p>
           </div>
+          <div flex justify-end>
           <button
             href=""
             className="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700 dark:bg-brand-400 dark:hover:bg-brand-300 dark:active:opacity-90"
           >
-            Ver
+            Editar
           </button>
+          <button
+            href=""
+            className="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700 dark:bg-brand-400 dark:hover:bg-brand-300 dark:active:opacity-90"
+          >
+            Eliminar
+          </button>
+          </div>
+          
         </div>
       </div>
     </Card>
