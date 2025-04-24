@@ -14,7 +14,7 @@ return (
  
 <>
   <div onClick={onOpen}>
-    <button className="linear bg-brand-500 hover:bg-brand-600 active:bg-brand-700 dark:bg-brand-400 dark:hover:bg-brand-300 dark:active:bg-brand-200 rounded-xl px-5 py-3 text-base font-medium text-white transition duration-200 dark:text-white">
+    <button className="linear bg-pink-600 hover:bg-pink-700 active:bg-pink-800 dark:bg-pink-400 dark:hover:bg-pink-300 dark:active:bg-pink-200 rounded-xl px-5 py-3 text-base font-medium text-white transition duration-200 dark:text-white">
       Agregar nuevo
     </button>
   </div>
