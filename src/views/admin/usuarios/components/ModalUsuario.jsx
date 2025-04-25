@@ -14,7 +14,7 @@ return (
  
 <>
   <div onClick={onOpen}>
-    <button className="linear bg-brand-500 hover:bg-brand-600 active:bg-brand-700 dark:bg-brand-400 dark:hover:bg-brand-300 dark:active:bg-brand-200 rounded-xl px-5 py-3 text-base font-medium text-white transition duration-200 dark:text-white">
+    <button className="linear bg-pink-600 hover:bg-pink-700 active:bg-pink-800 dark:bg-pink-400 dark:hover:bg-pink-300 dark:active:bg-pink-200 rounded-xl px-5 py-3 text-base font-medium text-white transition duration-200 dark:text-white">
       Agregar nuevo
     </button>
   </div>
@@ -38,7 +38,7 @@ return (
             >
               Cerrar
             </button>
-            <button className="linear text-navy-700 rounded-xl bg-brand-400 px-5 py-3 text-base font-medium transition duration-200 hover:bg-brand-500 active:bg-active dark:bg-white/10 dark:text-white text-white dark:hover:bg-white/20 dark:active:bg-white/30">
+            <button className="linear text-navy-700 rounded-xl bg-pink-400 px-5 py-3 text-base font-medium transition duration-200 hover:bg-pink-500 active:bg-active dark:bg-white/10 dark:text-white text-white dark:hover:bg-white/20 dark:active:bg-white/30">
               Guardar
             </button>
           </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import CardMenu from "components/card/CardMenu";
 import Card from "components/card";
 
 import {
@@ -82,7 +81,6 @@ function UsuariosTable(props) {
         <div className="text-xl font-bold text-navy-700 dark:text-white">
           Tabla de usuarios  
         </div>
-        <CardMenu />
       </header>
 
       <div className="mt-8 overflow-x-scroll xl:overflow-x-hidden">

@@ -30,6 +30,7 @@ return (
             <InputField label="Descripción" id="descripcion" type="text"/>
             <InputField label="Precio" id="precio" type="number"/>
             <InputField label="Cantidad" id="cantidad" type="number"/>
+            <InputField label="Foto" id="foto" type="file"/>
     </div>
     </div>
           <div className="flex gap-2 mt-5">
@@ -39,7 +40,7 @@ return (
             >
               Cerrar
             </button>
-            <button className="linear text-navy-700 rounded-xl bg-brand-400 px-5 py-3 text-base font-medium transition duration-200 hover:bg-brand-500 active:bg-active dark:bg-white/10 dark:text-white text-white dark:hover:bg-white/20 dark:active:bg-white/30">
+            <button className="linear text-navy-700 rounded-xl bg-pink-400 px-5 py-3 text-base font-medium transition duration-200 hover:bg-pink-500 active:bg-active dark:bg-white/10 dark:text-white text-white dark:hover:bg-white/20 dark:active:bg-white/30">
               Guardar
             </button>
           </div>

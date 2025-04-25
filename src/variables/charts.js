@@ -103,8 +103,8 @@ export const barChartOptionsDailyTraffic = {
 };
 
 export const pieChartOptions = {
-  labels: ["Your files", "System", "Empty"],
-  colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+  labels: ["Producto1", "Producto2", "Producto3"],
+  colors: ["#DB2878", "#6AD2FF", "#1B254B"],
   chart: {
     width: "50px",
   },
@@ -133,7 +133,7 @@ export const pieChartOptions = {
     },
   },
   fill: {
-    colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+    colors: ["#DB2878", "#6AD2FF", "#1B254B"],
   },
   tooltip: {
     enabled: true,
@@ -258,12 +258,12 @@ export const barChartOptionsWeeklyRevenue = {
 
 export const lineChartDataTotalSpent = [
   {
-    name: "Revenue",
+    name: "Hoy",
     data: [50, 64, 48, 66, 49, 68],
-    color: "#4318FF",
+    color: "#DB2878",
   },
   {
-    name: "Profit",
+    name: "Ayer",
     data: [30, 40, 24, 46, 20, 46],
     color: "#6AD2FF",
   },
@@ -322,7 +322,7 @@ export const lineChartOptionsTotalSpent = {
     },
     type: "text",
     range: undefined,
-    categories: ["SEP", "OCT", "NOV", "DEC", "JAN", "FEB"],
+    categories: ["8AM", "10AM", "12AM", "2PM", "4PM", "6PM"],
   },
 
   yaxis: {
