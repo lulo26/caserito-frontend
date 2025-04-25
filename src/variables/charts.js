@@ -104,7 +104,7 @@ export const barChartOptionsDailyTraffic = {
 
 export const pieChartOptions = {
   labels: ["Producto1", "Producto2", "Producto3"],
-  colors: ["#DB2878", "#6AD2FF", "#1B254B"],
+  colors: ["#DB2878", "#FDDF79", "#1B254B"],
   chart: {
     width: "50px",
   },
@@ -133,7 +133,7 @@ export const pieChartOptions = {
     },
   },
   fill: {
-    colors: ["#DB2878", "#6AD2FF", "#1B254B"],
+    colors: ["#DB2878", "#FDDF79", "#1B254B"],
   },
   tooltip: {
     enabled: true,
@@ -239,12 +239,12 @@ export const barChartOptionsWeeklyRevenue = {
   },
   fill: {
     type: "solid",
-    colors: ["#5E37FF", "#6AD2FF", "#E1E9F8"],
+    colors: ["#5E37FF", "#FDDF79", "#E1E9F8"],
   },
   legend: {
     show: false,
   },
-  colors: ["#5E37FF", "#6AD2FF", "#E1E9F8"],
+  colors: ["#5E37FF", "#FDDF79", "#E1E9F8"],
   dataLabels: {
     enabled: false,
   },
@@ -265,7 +265,7 @@ export const lineChartDataTotalSpent = [
   {
     name: "Ayer",
     data: [30, 40, 24, 46, 20, 46],
-    color: "#6AD2FF",
+    color: "#FDDF79",
   },
 ];
 

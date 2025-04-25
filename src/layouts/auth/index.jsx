@@ -46,7 +46,7 @@ export default function Auth() {
                 </Link>
                 <div className='flex w-full items-center justify-center px-2 mx-0 px-0'>
                     <img 
-                      className="h-40 w-40 rounded-full"
+                      className="h-40 w-40 rounded-full lg:h-40 lg:w-40 md:h-20 md:w-20 sm:h-20 sm:w-20"
                       src={logo} 
                       alt="logo de la página" />
                       <div className="ml-1 font-poppins text-[40px] font-bold uppercase text-pink-700 dark:text-white">
