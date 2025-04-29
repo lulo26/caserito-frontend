@@ -7,6 +7,7 @@ import Productos from "views/admin/productos";
 import Ventas from "views/admin/ventas";
 import Usuarios from "views/admin/usuarios";
 import Crear from "views/admin/crear";
+import { HomePage } from "views/landing";
 
 // Auth Imports
 import SignIn from "views/auth/SignIn";
@@ -64,6 +65,13 @@ const routes = [
     path: "sign-in",
     icon: <MdLock className="h-6 w-6" />,
     component: <SignIn />,
+  },
+  {
+    name: "Home",
+    layout: "/",
+    path: "home",
+    icon: <MdLock className="h-6 w-6" />,
+    component: <HomePage />,
   }
 ];
 export default routes;
