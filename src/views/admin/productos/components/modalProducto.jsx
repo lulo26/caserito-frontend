@@ -8,8 +8,24 @@ import { useDisclosure } from "@chakra-ui/hooks";
 import CardHorizon from "../../../../components/card/CardHorizon"
 import InputField from "../../../../components/input/InputField";
  
+import { useState } from "react";
+import axios from "axios";
+
 const ModalProducto = () => {
 const { isOpen, onOpen, onClose } = useDisclosure();
+const [response, setResponse] = useState([])
+const [nombre, setNombre, descripcion, setDescripcion, precio, setPrecio, stock, setStock, imagen] = useState()
+
+const crearProducto = async()=>{
+  let {data} = await axios.post('http://127.0.0.1:8000/api/producto',{
+     nombre: nombre,
+     descripcion: descripcion,
+     precio: precio,
+     stock: stock,
+     imagen: imagen
+    })
+     setResponse(data.data)
+}
 return (
  
 <>
@@ -26,11 +42,11 @@ return (
           <h1 className="mb-[20px] text-2xl font-bold">Agregar nuevo producto</h1>
           <div className="flex flex-col w-72 items-center">
           <div className="w-72">
-            <InputField label="Nombre" id="nombre"type="text"/>
-            <InputField label="Descripción" id="descripcion" type="text"/>
-            <InputField label="Precio" id="precio" type="number"/>
-            <InputField label="Cantidad" id="cantidad" type="number"/>
-            <InputField label="Foto" id="foto" type="file"/>
+            <InputField label="Nombre" type="text" name="nombre" value="nombre" onChangeText={(text) => setNombre(text)}/>
+            <InputField label="Descripción" type="text" name="descripcion"/>
+            <InputField label="Precio" type="number" name="precio"/>
+            <InputField label="Cantidad" type="number" name="stock"/>
+            <InputField label="Foto" type="file" name="imagen"/>
     </div>
     </div>
           <div className="flex gap-2 mt-5">
@@ -40,7 +56,7 @@ return (
             >
               Cerrar
             </button>
-            <button className="linear text-navy-700 rounded-xl bg-pink-400 px-5 py-3 text-base font-medium transition duration-200 hover:bg-pink-500 active:bg-active dark:bg-white/10 dark:text-white text-white dark:hover:bg-white/20 dark:active:bg-white/30">
+            <button onClick={crearProducto} className="linear text-navy-700 rounded-xl bg-pink-400 px-5 py-3 text-base font-medium transition duration-200 hover:bg-pink-500 active:bg-active dark:bg-white/10 dark:text-white text-white dark:hover:bg-white/20 dark:active:bg-white/30">
               Guardar
             </button>
           </div>
