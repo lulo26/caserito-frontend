@@ -31,4 +31,4 @@ input:checked.defaultCheckbox::before {
 .sgv-bg{
     background-image: url(/src/assets/svg/wave.svg);
     background-repeat: no-repeat;
-    }
+}

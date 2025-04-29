@@ -1,7 +1,9 @@
-import { useState } from "react";
 import Card from "components/card";
+import EditarProducto from "./EditarProducto";
+import { useState } from "react";
 
 const ProductCard = ({ title, price, image, extra }) => {
+  const [ isOpen, setIsOpen ] = useState(false);
   return (
     <Card
       extra={`flex flex-col w-full h-full !p-4 3xl:p-![18px] bg-pink-100 ${extra}`}
@@ -33,11 +35,13 @@ const ProductCard = ({ title, price, image, extra }) => {
           </div>
           <div flex justify-end className="grid grid-cols-2 gap-4">
           <button
+             onClick={() => setIsOpen(true)}
             href=""
             className="linear rounded-[20px] bg-purple-600 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-purple-700 active:bg-purple-700 dark:bg-purple-400 dark:hover:bg-purple-300 dark:active:opacity-90"
           >
             Editar
           </button>
+          <EditarProducto isOpen={isOpen} onClose={() => setIsOpen(false)}/>
           <button
             href=""
             className="linear rounded-[20px] bg-pink-700 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-pink-800 active:bg-pink-700 dark:bg-pink-400 dark:hover:bg-pink-300 dark:active:opacity-90"

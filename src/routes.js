@@ -6,6 +6,7 @@ import Home from "views/admin/home";
 import Productos from "views/admin/productos";
 import Ventas from "views/admin/ventas";
 import Usuarios from "views/admin/usuarios";
+import Crear from "views/admin/crear";
 
 // Auth Imports
 import SignIn from "views/auth/SignIn";
@@ -17,6 +18,7 @@ import {
   MdBarChart,
   MdPerson,
   MdLock,
+  MdLockOpen,
 } from "react-icons/md";
 
 const routes = [
@@ -50,11 +52,18 @@ const routes = [
     component: <Ventas />,
   },
   {
+    name: "Crear",
+    layout: "/auth",
+    path: "crear",
+    icon: <MdLockOpen className="h-6 w-6" />,
+    component: <Crear />,
+  },
+  {
     name: "Cerrar sesión",
     layout: "/auth",
     path: "sign-in",
     icon: <MdLock className="h-6 w-6" />,
     component: <SignIn />,
-  },
+  }
 ];
 export default routes;
